@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechCon 2024 | Premier Technology Conference</title>
     <style>
-        /* Global Styles */
+    
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
@@ -15,7 +15,7 @@
             background-color: #f9f9f9;
         }
         
-        /* Header Styles */
+        
         header {
             background-color: #0056b3;
             color: white;
@@ -28,7 +28,7 @@
             font-size: 2.5rem;
         }
         
-        /* Navigation Styles */
+        
         nav {
             background-color: #003366;
             padding: 1rem;
@@ -48,7 +48,7 @@
             color: #4da6ff;
         }
         
-        /* Main Content Styles */
+        
         main {
             max-width: 1200px;
             margin: 2rem auto;
@@ -72,21 +72,71 @@
             margin: 0 auto 2rem;
         }
         
+        
         .video-container {
-            background-color: #000;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 8px;
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
             overflow: hidden;
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #000;
+            border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         
-        video {
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            display: block;
+            height: 100%;
         }
         
-        /* Footer Styles */
+        .highlights {
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: left;
+            padding: 0 1rem;
+        }
+        
+        .highlights h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 0.5rem;
+        }
+        
+        .highlights ul {
+            padding-left: 1.5rem;
+        }
+        
+        .highlights li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            color: white;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        
+        .video-fallback a {
+            color: #4da6ff;
+        }
+        
+        
+        a:focus, button:focus, input:focus, video:focus {
+            outline: 3px solid #0056b3;
+            outline-offset: 2px;
+        }
+        
+        
         footer {
             background-color: #333;
             color: white;
@@ -115,17 +165,51 @@
     </nav>
     
     <main>
-        <section class="hero">
-            <h2>The Premier Technology Conference of the Year</h2>
+        <section class="hero" aria-labelledby="conference-heading">
+            <h2 id="conference-heading">The Premier Technology Conference of the Year</h2>
             <p>Join us for TechCon 2024, where industry leaders, innovators, and technology enthusiasts come together to explore the latest advancements in AI, cloud computing, cybersecurity, and emerging technologies. This three-day event features keynote speeches, hands-on workshops, and unparalleled networking opportunities.</p>
             
             <div class="video-container">
-                <video controls poster="images/techcon-poster.jpg">
+                <video 
+                    controls 
+                    poster="images/techcon-poster.jpg"
+                    aria-label="TechCon 2024 promotional video"
+                >
+                    
                     <source src="videos/techcon-promo.mp4" type="video/mp4">
                     <source src="videos/techcon-promo.webm" type="video/webm">
-                    <track src="videos/subtitles-en.vtt" kind="subtitles" srclang="en" label="English">
-                    Your browser does not support the video tag. <a href="videos/techcon-promo.mp4">Download the video</a> instead.
+                    
+                    
+                    <track 
+                        src="videos/subtitles-en.vtt" 
+                        kind="subtitles" 
+                        srclang="en" 
+                        label="English"
+                        default
+                    >
+                    
+                    
+                    <div class="video-fallback">
+                        <p>Your browser doesn't support HTML5 video. Here are alternative ways to view the content:</p>
+                        <ul>
+                            <li><a href="videos/techcon-promo.mp4">Download MP4 version</a></li>
+                            <li><a href="transcript.html">Read video transcript</a></li>
+                        </ul>
+                        <img src="images/techcon-poster.jpg" alt="TechCon 2024 promotional image" style="width:100%; margin-top:1rem;">
+                    </div>
                 </video>
+            </div>
+            
+            <div class="highlights">
+                <h3>Conference Highlights:</h3>
+                <ul>
+                    <li>Keynote speeches from industry pioneers</li>
+                    <li>Hands-on technical workshops</li>
+                    <li>Cutting-edge technology exhibitions</li>
+                    <li>Networking opportunities with experts</li>
+                    <li>Panel discussions on emerging tech trends</li>
+                    <li>Career development sessions</li>
+                </ul>
             </div>
         </section>
     </main>
