@@ -3,49 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechCon 2024 - The Premier Technology Conference</title>
-    <meta name="description" content="Join us for TechCon 2024, the leading conference for technology innovation and networking.">
+    <title>TechCon 2024 | Premier Technology Conference</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background-color: #003366;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #4da6ff;
+        }
+        
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h2 {
+            color: #0056b3;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .video-container {
+            background-color: #000;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        video {
+            width: 100%;
+            display: block;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .copyright {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>TechCon 2024</h1>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
-
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="register.html">Register</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
     <main>
-        <section aria-labelledby="conference-intro">
-            <h2 id="conference-intro">Welcome to TechCon 2024</h2>
-            <p>
-                TechCon 2024 is the premier annual technology conference bringing together industry leaders, 
-                innovators, and enthusiasts from around the world. Join us for three days of inspiring keynotes, 
-                hands-on workshops, and networking opportunities that will shape the future of technology.
-            </p>
+        <section class="hero">
+            <h2>The Premier Technology Conference of the Year</h2>
+            <p>Join us for TechCon 2024, where industry leaders, innovators, and technology enthusiasts come together to explore the latest advancements in AI, cloud computing, cybersecurity, and emerging technologies. This three-day event features keynote speeches, hands-on workshops, and unparalleled networking opportunities.</p>
             
             <div class="video-container">
-                <h3>Conference Promo Video</h3>
-                <video controls width="800" poster="techcon-poster.jpg" aria-describedby="video-description">
-                    <source src="techcon-promo.mp4" type="video/mp4">
-                    <source src="techcon-promo.webm" type="video/webm">
-                    <track kind="subtitles" src="subtitles-en.vtt" srclang="en" label="English">
-                    Your browser does not support the video tag.
+                <video controls poster="images/techcon-poster.jpg">
+                    <source src="videos/techcon-promo.mp4" type="video/mp4">
+                    <source src="videos/techcon-promo.webm" type="video/webm">
+                    <track src="videos/subtitles-en.vtt" kind="subtitles" srclang="en" label="English">
+                    Your browser does not support the video tag. <a href="videos/techcon-promo.mp4">Download the video</a> instead.
                 </video>
-                <p id="video-description">
-                    A promotional video showing highlights from previous TechCon events, including speaker sessions, 
-                    attendee interactions, and venue overview.
-                </p>
             </div>
         </section>
     </main>
-
+    
     <footer>
-        <p>&copy; Copyright 2024 TechCon Conference. All rights reserved.</p>
+        <p class="copyright">copyright © 2024 TechCon Conference. All rights reserved.</p>
     </footer>
 </body>
 </html>
